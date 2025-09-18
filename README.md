@@ -1,3 +1,4 @@
+
 # 🗣️ OyaSpeak
 
 OyaSpeak is a **web-based language learning app** that helps users learn **English and Nigerian languages (Yoruba, Igbo, Hausa)** through **speech-driven practice**. Built with modern web technologies and powered by the **Spitch speech-to-text API**, it provides real-time feedback on pronunciation and fluency, making language learning **fun, practical, and accessible**.
