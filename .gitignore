@@ -1,8 +1,13 @@
-# Ignore environment variables
+# .gitignore
+
+# Environment variables
 backend/.env
 backend/.env.*
 
-# Ignore Firebase config
+# Firebase configuration
 backend/firbase.json
 firbase.json
+
+# General environment files (catch-all)
 .env
+.env.*

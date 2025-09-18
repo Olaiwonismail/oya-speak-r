@@ -265,7 +265,7 @@ if __name__ == "__main__":
     engine = create_engine(settings.DATABASE_URL)
     Base.metadata.create_all(bind=engine)
     
-    db = SessionLocal()
+    db = SessionLocal() 
     try:
         seed_database(db)
     finally:
