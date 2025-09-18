@@ -1,0 +1,6 @@
+# Ignore environment variables
+backend/.env
+backend/.env.*
+
+# Ignore Firebase config
+backend/firebase.json
