@@ -1,6 +1,7 @@
 # app/services/firebase.py
 from http.client import HTTPException
 import firebase_admin
+import os
 from firebase_admin import auth, credentials
 from app.core.config import settings
 from firebase_admin.exceptions import FirebaseError
