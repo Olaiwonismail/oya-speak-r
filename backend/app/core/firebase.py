@@ -5,15 +5,29 @@ from firebase_admin import auth, credentials
 from app.core.config import settings
 from firebase_admin.exceptions import FirebaseError
 def init_firebase():
-    """Initialize Firebase Admin SDK"""
+    """Initialize Firebase Admin SDK using JSON content from an environment variable"""
     try:
-        # For production, use environment variable
-        print('Initializing Firebase with credentials ')
-        cred = credentials.Certificate(settings.FIREBASE_CREDENTIALS_PATH)
+        # Get the JSON string from the environment variable
+        firebase_creds_json = os.environ.get('FIREBASE_CREDENTIALS_JSON')
+        
+        if not firebase_creds_json:
+            raise ValueError("FIREBASE_CREDENTIALS_JSON environment variable not set")
+        
+        # Parse the JSON string into a dictionary
+        cred_dict = json.loads(firebase_creds_json)
+        
+        # Create credentials from the dictionary
+        cred = credentials.Certificate(cred_dict)
         firebase_admin.initialize_app(cred)
-    except ValueError:
-        # Already initialized
-        pass
+        print('Firebase initialized successfully')
+        
+    except ValueError as e:
+        if "The default Firebase app already exists" in str(e):
+            # Already initialized, ignore the error
+            pass
+        else:
+            # Re-raise other ValueErrors (like JSON parsing errors)
+            raise
 
 
 def verify_token(token: str):
