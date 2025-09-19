@@ -8,3 +8,4 @@ httpx
 rapidfuzz
 python-multipart
 pydantic
+spitch
