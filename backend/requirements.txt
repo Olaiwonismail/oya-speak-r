@@ -4,7 +4,7 @@ sqlalchemy
 psycopg2-binary
 python-dotenv
 firebase-admin
-httpx
+httpx<0.28
 rapidfuzz
 python-multipart
 pydantic
