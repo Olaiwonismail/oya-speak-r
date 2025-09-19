@@ -9,3 +9,4 @@ rapidfuzz
 python-multipart
 pydantic
 spitch
+fuzzywuzzy
