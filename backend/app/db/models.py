@@ -49,6 +49,7 @@ class LessonItem(Base):
     id = Column(Integer, primary_key=True, index=True)
     lesson_id = Column(Integer, ForeignKey("lessons.id"))
     text = Column(String)  # target phrase
+    expected_answer = Column(Text)  # NEW: expected pronunciation/response
     audio_url = Column(String)
     hint = Column(String)
     
