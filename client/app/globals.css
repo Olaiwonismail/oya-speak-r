@@ -1,0 +1,173 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color palette for OyaSpeak brand */
+  --background: #f4f1de;
+  --foreground: #3d405b;
+  --card: #ffffff;
+  --card-foreground: #3d405b;
+  --popover: #ffffff;
+  --popover-foreground: #3d405b;
+  --primary: #e07a5f;
+  --primary-foreground: #ffffff;
+  --secondary: #81b29a;
+  --secondary-foreground: #3d405b;
+  --muted: #f2cc8f;
+  --muted-foreground: #3d405b;
+  --accent: #f2cc8f;
+  --accent-foreground: #3d405b;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: #e6e2d3;
+  --input: #e6e2d3;
+  --ring: #81b29a;
+  --chart-1: #e07a5f;
+  --chart-2: #81b29a;
+  --chart-3: #f2cc8f;
+  --chart-4: #3d405b;
+  --chart-5: #f4f1de;
+  --radius: 0.625rem;
+  --sidebar: #f4f1de;
+  --sidebar-foreground: #3d405b;
+  --sidebar-primary: #e07a5f;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f2cc8f;
+  --sidebar-accent-foreground: #3d405b;
+  --sidebar-border: #e6e2d3;
+  --sidebar-ring: #81b29a;
+}
+
+.dark {
+  --background: #3d405b;
+  --foreground: #f4f1de;
+  --card: #3d405b;
+  --card-foreground: #f4f1de;
+  --popover: #3d405b;
+  --popover-foreground: #f4f1de;
+  --primary: #e07a5f;
+  --primary-foreground: #ffffff;
+  --secondary: #81b29a;
+  --secondary-foreground: #f4f1de;
+  --muted: #f2cc8f;
+  --muted-foreground: #3d405b;
+  --accent: #f2cc8f;
+  --accent-foreground: #3d405b;
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: #81b29a;
+  --input: #81b29a;
+  --ring: #e07a5f;
+  --chart-1: #e07a5f;
+  --chart-2: #81b29a;
+  --chart-3: #f2cc8f;
+  --chart-4: #f4f1de;
+  --chart-5: #3d405b;
+  --sidebar: #3d405b;
+  --sidebar-foreground: #f4f1de;
+  --sidebar-primary: #e07a5f;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #81b29a;
+  --sidebar-accent-foreground: #f4f1de;
+  --sidebar-border: #81b29a;
+  --sidebar-ring: #e07a5f;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Added custom animations for gamification */
+@keyframes confetti {
+  0% {
+    transform: translateY(0) rotateZ(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotateZ(720deg);
+    opacity: 0;
+  }
+}
+
+.confetti {
+  animation: confetti 3s ease-out forwards;
+}
+
+@keyframes pulse-success {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.pulse-success {
+  animation: pulse-success 0.6s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
