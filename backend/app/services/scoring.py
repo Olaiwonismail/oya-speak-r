@@ -2,6 +2,7 @@
 import unicodedata
 import re
 from difflib import SequenceMatcher
+from fuzzywuzzy import fuzz
 
 def normalize_text(text: str):
     """Normalize text for comparison"""
