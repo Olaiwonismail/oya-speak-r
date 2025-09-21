@@ -21,7 +21,7 @@ export const translations = {
     "hero.secondary_cta": "Watch Demo",
 
     // Features
-    "features.title": "Why Choose OyaSpeak?",
+    "features.title": "Why Choose VoiceLang?",
     "features.subtitle": "Experience the future of language learning with cutting-edge AI technology",
     "features.speak.title": "AI Speech Recognition",
     "features.speak.description":
@@ -53,7 +53,7 @@ export const translations = {
 
     // CTA Section
     "cta.title": "Ready to Transform Your Language Skills?",
-    "cta.subtitle": "Join thousands of learners who are already mastering Nigerian languages with OyaSpeak",
+    "cta.subtitle": "Join thousands of learners who are already mastering Nigerian languages with VoiceLang",
     "cta.button": "Get Started Free",
 
     // Footer
@@ -63,7 +63,7 @@ export const translations = {
     "footer.links.terms": "Terms of Service",
     "footer.links.contact": "Contact",
     "footer.links.help": "Help Center",
-    "footer.copyright": "© 2025 OyaSpeak. All rights reserved.",
+    "footer.copyright": "© 2025 VoiceLang. All rights reserved.",
     "footer.powered_by": "Powered by",
 
     // Auth
@@ -194,7 +194,7 @@ export const translations = {
     "hero.secondary_cta": "Wo Afihan",
 
     // Features
-    "features.title": "Kilode ti o yẹ ki o yan OyaSpeak?",
+    "features.title": "Kilode ti o yẹ ki o yan VoiceLang?",
     "features.subtitle": "Ni iriri ọjọ iwaju ti kikọ ede pẹlu imọ-ẹrọ AI ti o ga julọ",
     "features.speak.title": "Idanimọ Ọrọ AI",
     "features.speak.description":
@@ -288,7 +288,7 @@ export const translations = {
     "hero.secondary_cta": "Lee Ngosi",
 
     // Features
-    "features.title": "Gịnị mere ị ga-eji họrọ OyaSpeak?",
+    "features.title": "Gịnị mere ị ga-eji họrọ VoiceLang?",
     "features.subtitle": "Nweta ahụmịhe ọdịnihu nke ịmụ asụsụ na teknụzụ AI kachasị elu",
     "features.speak.title": "Nchọpụta Okwu AI",
     "features.speak.description":
@@ -380,7 +380,7 @@ export const translations = {
     "hero.secondary_cta": "Kalli Demo",
 
     // Features
-    "features.title": "Me yasa za ku zaɓi OyaSpeak?",
+    "features.title": "Me yasa za ku zaɓi VoiceLang?",
     "features.subtitle": "Samun gogewar makomar koyon harshe tare da fasahar AI mafi girma",
     "features.speak.title": "Gane Magana AI",
     "features.speak.description":

@@ -22,8 +22,8 @@ const spitchClient = new Spitch({ apiKey: process.env.NEXT_PUBLIC_SPITCH_API_KEY
 
 const languageVoices: Record<string, string> = {
   en: "john",
-  ha: "hassan",
-  ig: "obbina",
+  ha: "hasan",
+  ig: "obinna",
   yo: "femi",
 };
 
