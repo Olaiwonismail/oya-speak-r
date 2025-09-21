@@ -75,7 +75,7 @@ export default function HomePage() {
       name: "Adunni Okafor",
       role: "Student, Lagos",
       content:
-        "VoiceLang helped me perfect my English pronunciation while staying connected to my Yoruba roots. The AI feedback is incredibly accurate!",
+        "Oyatalk helped me perfect my English pronunciation while staying connected to my Yoruba roots. The AI feedback is incredibly accurate!",
       rating: 5,
       avatar: "/placeholder.svg?height=40&width=40",
     },
@@ -91,7 +91,7 @@ export default function HomePage() {
       name: "Fatima Abdullahi",
       role: "Teacher, Abuja",
       content:
-        "I use VoiceLang to improve my English and Igbo. The progress tracking helps me see real improvement in my pronunciation.",
+        "I use Oyatalk to improve my English and Igbo. The progress tracking helps me see real improvement in my pronunciation.",
       rating: 5,
       avatar: "/placeholder.svg?height=40&width=40",
     },
@@ -182,7 +182,7 @@ export default function HomePage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">How VoiceLang Works</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">How Oyatalk Works</h2>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
               Start your language learning journey in just four simple steps
             </p>
@@ -301,7 +301,7 @@ export default function HomePage() {
                 <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                   <Mic className="h-5 w-5 text-primary-foreground" />
                 </div>
-                <span className="text-xl font-bold">VoiceLang</span>
+                <span className="text-xl font-bold">Oyatalk</span>
               </div>
               <p className="text-background/80 mb-4">{t("footer.tagline")}</p>
               <div className="flex gap-4"></div>

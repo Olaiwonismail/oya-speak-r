@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color palette for VoiceLang brand */
+  /* Updated color palette for Oyatalk brand */
   --background: #f4f1de;
   --foreground: #3d405b;
   --card: #ffffff;

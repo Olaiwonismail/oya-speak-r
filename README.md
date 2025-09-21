@@ -1,13 +1,13 @@
 
-# 🗣️ VoiceLang
+# 🗣️ Oyatalk
 
-VoiceLang is a **web-based language learning app** that helps users learn **English and Nigerian languages (Yoruba, Igbo, Hausa)** through **speech-driven practice**. Built with modern web technologies and powered by the **Spitch speech-to-text API**, it provides real-time feedback on pronunciation and fluency, making language learning **fun, practical, and accessible**.
+Oyatalk is a **web-based language learning app** that helps users learn **English and Nigerian languages (Yoruba, Igbo, Hausa)** through **speech-driven practice**. Built with modern web technologies and powered by the **Spitch speech-to-text API**, it provides real-time feedback on pronunciation and fluency, making language learning **fun, practical, and accessible**.
 
 --- 
 
 ## 🚀 Features
 
-* 🎤 **Speak to Learn**: Practice phrases by speaking into your mic — VoiceLang listens and gives instant feedback.
+* 🎤 **Speak to Learn**: Practice phrases by speaking into your mic — Oyatalk listens and gives instant feedback.
 * 📚 **Bilingual Lessons**: Learn **English** if you’re a Yoruba/Igbo/Hausa speaker, or practice Nigerian languages if you’re learning from English.
 * 🏪 **Scenario-Based Learning**: Lessons are grouped into real-life contexts like **Market, Health, Transport, Work, and Polite Expressions**.
 * ✅ **Smart Scoring**: Get detailed feedback on each word — see what’s correct, close, or wrong.
@@ -24,7 +24,7 @@ VoiceLang is a **web-based language learning app** that helps users learn **Engl
 2. **Choose a Language Goal** – Learn English, Yoruba, Igbo, or Hausa.
 3. **Pick a Lesson** – Example: *At the Market*.
 4. **Listen & Repeat** – Hear native audio, then speak into your mic.
-5. **Get Feedback** – VoiceLang transcribes your speech, scores it, and highlights mistakes.
+5. **Get Feedback** – Oyatalk transcribes your speech, scores it, and highlights mistakes.
 6. **Track Progress** – Earn XP, streaks, and badges as you improve.
 7. **Climb the Leaderboard** – See how you rank against others.
 
@@ -49,7 +49,7 @@ VoiceLang is a **web-based language learning app** that helps users learn **Engl
 
 ---
 
-## 🌍 Why VoiceLang?
+## 🌍 Why Oyatalk?
 
 * Tackles **real communication problems** in Nigeria: healthcare, education, markets, emergencies.
 * Bridges the gap between **English proficiency** and **local language preservation**.

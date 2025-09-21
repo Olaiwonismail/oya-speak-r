@@ -9,7 +9,7 @@ import { AuthProvider } from "@/contexts/auth-context"
 import { Suspense } from "react"
 
 export const metadata: Metadata = {
-  title: "VoiceLang - Master English as well as Nigerian Languages with AI",
+  title: "Oyatalk - Master English as well as Nigerian Languages with AI",
   description:
     "Learn English, Yoruba, Igbo, and Hausa through interactive voice lessons with real-time feedback and gamified progress tracking.",
   generator: "Spitch Ai",

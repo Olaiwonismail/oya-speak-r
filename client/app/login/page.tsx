@@ -73,7 +73,7 @@ export default function LoginPage() {
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <Mic className="h-6 w-6 text-primary-foreground" />
             </div>
-            <span className="text-2xl font-bold text-foreground">VoiceLang</span>
+            <span className="text-2xl font-bold text-foreground">Oyatalk</span>
           </Link>
         </div>
 
