@@ -81,18 +81,18 @@ async def get_user_attempts(
     
     return attempts
 
-# @router.post("/auth/signin")
-# async def sign_in(email: str, password: str):
-#     """
-#     Sign in with email and password (handled by backend)
-#     """
-#     try:
-#         auth_result = await sign_in_with_email_and_password(email, password)
-#         return auth_result
-#     except HTTPException as e:
-#         raise e
-#     except Exception as e:
-#         raise HTTPException(
-#             status_code=500,
-#             detail=f"Unexpected error: {str(e)}"
-#         )
+@router.post("/auth/signin")
+async def sign_in(email: str, password: str):
+    """
+    Sign in with email and password (handled by backend)
+    """
+    try:
+        auth_result = await sign_in_with_email_and_password(email, password)
+        return auth_result
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Unexpected error: {str(e)}"
+        )
