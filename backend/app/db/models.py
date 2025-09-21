@@ -56,6 +56,7 @@ class LessonItem(Base):
     lesson = relationship("Lesson", back_populates="items")
     attempts = relationship("Attempt", back_populates="lesson_item")
 
+
 class Attempt(Base):
     __tablename__ = "attempts"
     

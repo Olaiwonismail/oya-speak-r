@@ -2,7 +2,6 @@
 import unicodedata
 import re
 from difflib import SequenceMatcher
-from fuzzywuzzy import fuzz  # make sure fuzzywuzzy is installed
 
 def normalize_text(text: str):
     """Normalize text for comparison"""
@@ -18,11 +17,13 @@ def normalize_text(text: str):
 def similarity_ratio(a: str, b: str) -> float:
     """Return similarity ratio between two words (0-100)"""
     return SequenceMatcher(None, a, b).ratio() * 100
-
+# scoring.py
 def score_attempt(target: str, transcript: str, confidence: float):
     target_norm = normalize_text(target)
     transcript_norm = normalize_text(transcript)
     
+    # Language-specific normalization
+
     target_words = target_norm.split()
     transcript_words = transcript_norm.split()
     
@@ -44,15 +45,29 @@ def score_attempt(target: str, transcript: str, confidence: float):
         transcript_word = transcript_words[i]
         similarity = fuzz.ratio(target_word, transcript_word) / 100
         
-        if similarity >= 0.9:
-            status = "correct"
-            suggestion = ""
-        elif similarity >= 0.6:
-            status = "close"
-            suggestion = f"Try pronouncing '{target_word}' more clearly"
+        # Adjust thresholds based on language if needed
+        if language == "english":
+            # English might have different thresholds
+            if similarity >= 0.95:
+                status = "correct"
+                suggestion = ""
+            elif similarity >= 0.7:
+                status = "close"
+                suggestion = f"Try pronouncing '{target_word}' more clearly"
+            else:
+                status = "wrong"
+                suggestion = f"Expected '{target_word}' but heard '{transcript_word}'"
         else:
-            status = "wrong"
-            suggestion = f"Expected '{target_word}' but heard '{transcript_word}'"
+            # Use original thresholds for other languages
+            if similarity >= 0.9:
+                status = "correct"
+                suggestion = ""
+            elif similarity >= 0.6:
+                status = "close"
+                suggestion = f"Try pronouncing '{target_word}' more clearly"
+            else:
+                status = "wrong"
+                suggestion = f"Expected '{target_word}' but heard '{transcript_word}'"
         
         word_feedback.append({
             "word": target_word,
@@ -68,11 +83,16 @@ def score_attempt(target: str, transcript: str, confidence: float):
     return {
         "score": round(overall_score, 1),
         "word_feedback": word_feedback,
-        "suggestions": generate_suggestions(word_feedback)
+        "suggestions": generate_suggestions(word_feedback, language)
     }
 
-def generate_suggestions(word_feedback):
+def generate_suggestions(word_feedback, language):
     wrong_words = [fb for fb in word_feedback if fb["status"] == "wrong"]
     if wrong_words:
         return f"Focus on: {', '.join([w['word'] for w in wrong_words])}"
-    return "Great job! Keep practicing!"
+    
+    # Language-specific encouragement
+    if language == "english":
+        return "Great job! Your English pronunciation is improving!"
+    else:
+        return "Great job! Keep practicing!"
